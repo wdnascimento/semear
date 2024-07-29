@@ -16,4 +16,7 @@ return [
     'Important' => 'Importante',
     'Warning' => 'Aviso',
     'Information' => 'Informação',
+    'financial' => 'Financeiro',
+    'receipt' => 'Recibo',
+    'report' => 'Relatório de Recibos'
 ];

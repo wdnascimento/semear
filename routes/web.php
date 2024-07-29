@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\IndexController;
+use App\Http\Controllers\Admin\ReceiptController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,19 @@ Auth::routes();
 Route::group(['prefix' => 'admin','middleware' => 'auth'],function(){
     // HOME
     Route::get('/', [IndexController::class,'index'])->name('admin.index');
+
+    // Receipt
+    Route::get('receipt', [ReceiptController::class,'index'])->name('admin.receipt.index');
+    Route::get('receipt/create',[ReceiptController::class, 'create'])->name('admin.receipt.create');
+    Route::get('receipt/edit/{id}', [ReceiptController::class,'edit'])->name('admin.receipt.edit');
+    Route::get('receipt/show/{id}', [ReceiptController::class, 'show'])->name('admin.receipt.show');
+    Route::get('receipt/print/{id}', [ReceiptController::class, 'print'])->name('admin.receipt.print');
+    Route::get('receipt/report', [ReceiptController::class, 'report'])->name('admin.receipt.report');
+    // Planos Operations
+    Route::post('receipt/store',[ReceiptController::class, 'store'])->name('admin.receipt.store');
+    Route::put('receipt/{id}',[ReceiptController::class, 'update'])->name('admin.receipt.update');
+    Route::delete('receipt/{id}',[ReceiptController::class, 'destroy'])->name('admin.receipt.destroy');
+
     // User Routes
     Route::get('user', [UserController::class,'index'])->name('admin.user.index');
     Route::get('user/create', [UserController::class, 'create'])->middleware('can:admin')->name('admin.user.create');

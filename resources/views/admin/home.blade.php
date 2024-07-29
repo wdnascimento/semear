@@ -11,36 +11,34 @@
         <!-- Small boxes (Stat box) -->
 	      <div class="row">
 
-            <div class="col-lg-3 col-xs-6">
+            <div class="col-lg-6 col-xs-6">
 	          <!-- small box -->
 	          <div class="small-box bg-info">
 	            <div class="inner">
-                        <h3>0</h3>
-
-	              <p>Socios Cadastrados (Ativos)</p>
+                    <h3>{{ $data['receipt'] }}</h3>
+                    <p>Recibos Emitidos</p>
 	            </div>
 	            <div class="icon">
-	              <i class="fa fa-users"></i>
+	              <i class="fas fa-fw fa-receipt"></i>
 	            </div>
-	            <a href="#" class="small-box-footer">Ver Todas <i class="fa fa-plus"></i></a>
+	            <a href="{{ route('admin.receipt.index') }}" class="small-box-footer">Ver Todas <i class="fa fa-plus"></i></a>
 	          </div>
 	        </div>
 	        <!-- ./col -->
-                <div class="col-lg-3 col-xs-6">
+            <div class="col-lg-6 col-xs-6">
 	          <!-- small box -->
 	          <div class="small-box bg-green">
 	            <div class="inner">
-                        0</h3>
-
-	              <p>Socios Cadastrados (Inativos)</p>
+                    <h3>R$ {{ number_format($data['sum_receipt'], 2, ',', '.') }}</h3>
+	                <p>Total de Emitidos</p>
 	            </div>
 	            <div class="icon">
-	              <i class="fas fa-user-times"></i>
+	              <i class="fas fa-chart-bar "></i>
 	            </div>
-	            <a href="#" class="small-box-footer">Ver Todas <i class="fa fa-plus"></i></a>
+                <a href="{{ route('admin.receipt.report') }}" class="small-box-footer">Ver Todas <i class="fa fa-plus"></i></a>
 	          </div>
 	        </div>
-	        <!-- ./col -->
+	        {{-- <!-- ./col -->
 	        <div class="col-lg-3 col-xs-6">
 	          <!-- small box -->
 	          <div class="small-box bg-gray">
@@ -83,7 +81,7 @@
 	            </div>
 	            <a href="#" class="small-box-footer">Ver Todas <i class="fa fa-plus"></i></a>
 	          </div>
-	        </div>
+	        </div> --}}
 	        <!-- ./col -->
       	</div>
       <!-- /.row -->

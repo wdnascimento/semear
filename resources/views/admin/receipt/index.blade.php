@@ -35,6 +35,7 @@
                                 <th>Pagador (Sacado)</th>
                                 <th>Valor</th>
                                 <th>Referência</th>
+                                <th>Data</th>
                                 <th>Operação</th>
                             </tr>
                             </thead>
@@ -44,6 +45,7 @@
                                     <td>{{ $item->payer }}</td>
                                     <td>R$ {{ number_format($item->value, 2, ',', '.') }}</td>
                                     <td>{{ $item->reference }}</td>
+                                    <td>{{ Carbon\Carbon::parse($item->created_at)->format('d/m/Y')  }}</td>
                                     <td>
                                         <a href="javascript: printReceipt('{{ route($params['main_route'].'.print', $item->id)}}')" class="btn btn-info btn-xs"><span class="fa fa-print"></span> Imprimir</a>
                                         <a href="{{ route($params['main_route'].'.edit', $item->id) }}" class="btn btn-info btn-xs"><span class="fas fa-edit"></span> Editar</a>

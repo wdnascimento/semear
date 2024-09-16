@@ -58,7 +58,7 @@ class ReceiptController extends Controller
     public function store(RecieptCreateRequest $request)
     {
         $dataForm  = $request->all();
-        $dataForm['value'] = (float) str_replace(',', '.', $dataForm['value']);
+        $dataForm['value'] = (float) str_replace(',', '.', str_replace('.', '', $dataForm['value']));
 
         $insert = $this->receipt->create($dataForm);
         if($insert){
@@ -108,7 +108,7 @@ class ReceiptController extends Controller
     public function update(RecieptUpdateRequest $request, $id)
     {
         $dataForm  = $request->all();
-        $dataForm['value'] = (float) str_replace(',', '.', $dataForm['value']);
+        $dataForm['value'] = (float) str_replace(',', '.', str_replace('.', '', $dataForm['value']));
 
         if($this->receipt->find($id)->update($dataForm)){
             return redirect()->route($this->params['main_route'].'.index');

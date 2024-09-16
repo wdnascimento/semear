@@ -8075,7 +8075,7 @@ h1, h2, h3, h4, h5,
         padding-right: 0;
         padding-top: .9rem;
         padding-bottom: .9rem;
-        color: rgba(255, 255, 255, 0.7); }
+        }
         .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
           color: #3E4095;
         } }

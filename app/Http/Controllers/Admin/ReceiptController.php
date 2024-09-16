@@ -33,7 +33,7 @@ class ReceiptController extends Controller
         ];
 
         $params = $this->params;
-        $data = $this->receipt->get();
+        $data = $this->receipt->paginate(50);
         return view($this->params['main_route'].'.index',compact('params','data'));
     }
 

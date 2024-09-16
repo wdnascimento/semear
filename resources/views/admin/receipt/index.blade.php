@@ -56,6 +56,10 @@
 
                             </tbody>
                         </table>
+                        <div class="card-footer d-flex pb-0 bg-white justify-content-center">
+                            {{ $data->withQueryString()->links('pagination::bootstrap-4') }}
+                        </div>
+
                     @else
                         <div class="alert alert-success m-2" role="alert">
                             Nenhuma informação cadastrada.

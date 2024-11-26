@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\IndexController;
+use App\Http\Controllers\Admin\PhotoController;
 use App\Http\Controllers\Admin\ReceiptController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
@@ -41,6 +42,14 @@ Route::group(['prefix' => 'admin','middleware' => 'auth'],function(){
     Route::get('user/show/{id}', [UserController::class, 'show'])->middleware('can:admin')->name('admin.user.show');
     Route::put('user/update/{id}', [UserController::class, 'update'])->name('admin.user.update');
     Route::delete('user/destroy/{id}', [UserController::class, 'destroy'])->middleware('can:admin')->name('admin.user.destroy');
+
+    // Photos Routes
+    Route::get('photos', [PhotoController::class,'index'])->name('admin.photos.index');
+    Route::get('photos/create', [PhotoController::class,'create'])->name('admin.photos.create');
+    Route::post('photos/store', [PhotoController::class, 'store'])->name('admin.photos.store');
+    Route::get('photos/show/{id}', [PhotoController::class, 'show'])->name('admin.photos.show');
+    Route::delete('photos/destroy/{id}', [PhotoController::class, 'destroy'])->name('admin.photos.destroy');
+
 
      // User password
     Route::get('user/show-password/{id}', [UserController::class, 'showPassword'])->name('admin.user.show-password');

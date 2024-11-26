@@ -18,5 +18,7 @@ return [
     'Information' => 'Informação',
     'financial' => 'Financeiro',
     'receipt' => 'Recibo',
-    'report' => 'Relatório de Recibos'
+    'report' => 'Relatório de Recibos',
+    'site' => 'Site',
+    'photos' => 'Fotos do Site',
 ];

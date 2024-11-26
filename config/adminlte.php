@@ -278,8 +278,8 @@ return [
     */
 
     'enabled_laravel_mix' => false,
-    'laravel_mix_css_path' => 'css/app.css',
-    'laravel_mix_js_path' => 'js/app.js',
+    'laravel_mix_css_path' => 'resource/css/app.css',
+    'laravel_mix_js_path' => 'resource/js/app.js',
 
     /*
     |--------------------------------------------------------------------------
@@ -316,6 +316,13 @@ return [
             'text' => 'report',
             'url' => 'admin/receipt/report',
             'icon' => 'fas fa-chart-bar',
+        ],
+
+        ['header' => 'site', 'classes' => 'h1 text-yellow text-bold'],
+        [
+            'text' => 'photos',
+            'url' => 'admin/photos',
+            'icon' => 'fas fa-fw fa-camera',
         ],
 
         ['header' => 'account_settings', 'classes' => 'h1 text-yellow text-bold'],

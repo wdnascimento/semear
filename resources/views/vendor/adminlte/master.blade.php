@@ -24,13 +24,15 @@
 
     {{-- Base Stylesheets --}}
     @if(!config('adminlte.enabled_laravel_mix'))
-        <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('vendor/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('vendor/adminlte/dist/css/adminlte.min.css') }}">
-
+        @vite('public/vendor/fontawesome-free/css/all.min.css')
+        @vite('public/vendor/overlayScrollbars/css/OverlayScrollbars.min.css')
         @if(config('adminlte.google_fonts.allowed', true))
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
         @endif
+        @vite('public/vendor/adminlte/dist/css/adminlte.min.css')
+        @vite(config('adminlte.laravel_mix_css_path', 'css/app.css'))
+        @vite('resources/css/app.css')
+        @vite(config('adminlte.laravel_mix_js_path', 'js/app.js'))
     @else
         <link rel="stylesheet" href="{{ mix(config('adminlte.laravel_mix_css_path', 'css/app.css')) }}">
     @endif
@@ -85,9 +87,14 @@
         <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
         <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+        <script src="{{ asset('vendor/sweetalert2/sweetalert2.all.min.js') }}"></script>
         <script src="{{ asset('vendor/adminlte/dist/js/adminlte.min.js') }}"></script>
     @else
-        <script src="{{ mix(config('adminlte.laravel_mix_js_path', 'js/app.js')) }}"></script>
+        @vite('public/vendor/jquery/jquery.min.js')
+        @vite('public/vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js')
+        @vite('public/vendor/bootstrap/js/bootstrap.bundle.min.js')
+        @vite('public/vendor/adminlte/dist/js/adminlte.min.js')
+
     @endif
 
     {{-- Extra Configured Plugins Scripts --}}

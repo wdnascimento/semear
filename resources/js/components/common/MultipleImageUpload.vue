@@ -74,8 +74,11 @@ export default {
     }
 
     .preview {
-        width: 100px;
-        height: 100px;
+        width: 320px;
+        height: 240px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
         object-fit: cover;
     }
 </style>

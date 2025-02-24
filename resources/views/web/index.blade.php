@@ -117,35 +117,16 @@
             </div>
 
     		<div class="row no-gutters">
-					<div class="col-md-3 ftco-animate">
-						<a href="{{ asset('assets') }}/images/image_1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{ asset('assets') }}/images/course-1.jpg);">
-							<div class="icon mb-4 d-flex align-items-center justify-content-center">
-    						<span class="icon-instagram"></span>
-    					</div>
-						</a>
-					</div>
-					<div class="col-md-3 ftco-animate">
-						<a href="{{ asset('assets') }}/images/image_2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{ asset('assets') }}/images/image_2.jpg);">
-							<div class="icon mb-4 d-flex align-items-center justify-content-center">
-    						<span class="icon-instagram"></span>
-    					</div>
-						</a>
-					</div>
-					<div class="col-md-3 ftco-animate">
-						<a href="{{ asset('assets') }}/images/image_3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{ asset('assets') }}/images/image_3.jpg);">
-							<div class="icon mb-4 d-flex align-items-center justify-content-center">
-    						<span class="icon-instagram"></span>
-    					</div>
-						</a>
-					</div>
-					<div class="col-md-3 ftco-animate">
-						<a href="{{ asset('assets') }}/images/image_4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{ asset('assets') }}/images/image_4.jpg);">
-							<div class="icon mb-4 d-flex align-items-center justify-content-center">
-    						<span class="icon-instagram"></span>
-    					</div>
-						</a>
-					</div>
-        </div>
+                    @foreach ($data['photos'] as $item)
+                        <div class="col-md-3 ftco-animate">
+                            <a href="{{ asset('storage').'/'.$item->url }}" class="gallery image-popup img d-flex align-items-center" style="background-image: url({{ asset('storage').'/'.$item->url }});">
+                                <div class="icon mb-4 d-flex align-items-center justify-content-center">
+                                    <span class="icon-search"></span>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+		</div>
     	</div>
     </section>
 
@@ -229,21 +210,22 @@
         <div class="container">
             <div class="row d-flex align-items-stretch no-gutters">
                 <div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
-                    <form action="#">
+                    <form id="contactForm" >
+                        @csrf
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name">
+                            <input type="text" id="name" class="form-control" placeholder="Nome">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Email">
+                            <input type="text" id="email" class="form-control" placeholder="E-mail">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
+                            <input type="text" id="subject" class="form-control" placeholder="Assunto">
                         </div>
                         <div class="form-group">
-                            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                            <textarea id="message" id="" cols="30" rows="7" class="form-control" placeholder="Mensagem"></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                            <input type="submit" value="Enviar Mensagem" class="btn btn-primary py-3 px-5">
                         </div>
                     </form>
                 </div>
@@ -264,9 +246,6 @@
             </div>
         </div>
     </section>
-
-
-
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
@@ -305,7 +284,6 @@
             <div class="ftco-footer-widget mb-5">
             	<h2 class="ftco-heading-2 mb-0">Conecte Conosco</h2>
             	<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
               </ul>
@@ -314,7 +292,6 @@
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-
             <p>
                 Feito por <a href="https://wnascimento.com.br" target="_blank" class="p-2"><img src="{{ asset('assets') }}/img/w-logo.svg" width="25" height="auto" alt=""></a>
                 Copyright &copy;<script>document.write(new Date().getFullYear());</script>
@@ -323,8 +300,6 @@
         </div>
       </div>
     </footer>
-
-
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen">
@@ -347,6 +322,7 @@
   <script src="{{ asset('assets') }}/js/jquery.animateNumber.min.js"></script>
   <script src="{{ asset('assets') }}/js/scrollax.min.js"></script>
   <script src="{{ asset('assets') }}/js/main.js"></script>
+  <script src="{{ asset('assets') }}/js/contact.js"></script>
 
   </body>
 </html>

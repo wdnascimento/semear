@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\IndexController;
 use App\Http\Controllers\Admin\PhotoController;
 use App\Http\Controllers\Admin\ReceiptController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Web\EmailController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Web\IndexController as WebIndexController;
 use Illuminate\Support\Facades\Auth;
@@ -15,6 +16,7 @@ use Illuminate\Support\Facades\Auth;
 
 
 Route::get('/', [WebIndexController::class, 'index'])->name('home');
+Route::post('send-email', [EmailController::class, 'sendEmail']);
 
 Auth::routes();
 

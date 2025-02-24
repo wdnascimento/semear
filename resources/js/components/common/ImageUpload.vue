@@ -69,7 +69,7 @@ export default {
         margin-top: 20px;
     }
     .preview {
-        max-width: 180px;
+        max-width: 300px;
         height: auto;
     }
 </style>

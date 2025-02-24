@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\Photo;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -24,6 +25,7 @@ class IndexController extends Controller
      */
     public function index()
     {
-        return view('web.index');
+        $data['photos'] = Photo::all();
+        return view('web.index',compact('data'));
     }
 }

@@ -18,7 +18,7 @@ class EmailController extends Controller
             'message' => 'required|string',
         ]);
 
-        Mail::to('wagnerinfo@gmail.com')->send(new ContactMail($data));
+        Mail::to(['wagnerinfo@gmail.com','wagnerinfo@hotmail.com'])->send(new ContactMail($data));
 
         return response()->json(['message' => 'E-mail enviado com sucesso!']);
     }

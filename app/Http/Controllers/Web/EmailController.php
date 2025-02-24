@@ -18,7 +18,13 @@ class EmailController extends Controller
             'message' => 'required|string',
         ]);
 
-        Mail::to('wagnerinfo@gmail.com')->send(new ContactMail($data));
+        try{
+            Mail::to('wagnerinfo@gmail.com')->send(new ContactMail($data));
+        }
+        catch(\Exception $e){
+            return response()->json(['message' => 'Erro ao enviar e-mail!','error' => $e], 400);
+        }
+
 
         return response()->json(['message' => 'E-mail enviado com sucesso!']);
     }

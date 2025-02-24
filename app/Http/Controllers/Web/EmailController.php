@@ -20,7 +20,7 @@ class EmailController extends Controller
         ]);
 
         try {
-            Mail::to('wagnerinfo@hotmail.com')->send(new ContactMail($data));
+            Mail::to('contato@educacaosemear.com.br')->send(new ContactMail($data));
 
             return response()->json(['message' => 'E-mail enviado com sucesso!'], 200);
         } catch (\Exception $e) {

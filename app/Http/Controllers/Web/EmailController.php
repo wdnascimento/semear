@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 
 class EmailController extends Controller
 {
@@ -18,14 +19,18 @@ class EmailController extends Controller
             'message' => 'required|string',
         ]);
 
-        try{
-            Mail::to('wagnerinfo@gmail.com')->send(new ContactMail($data));
-        }
-        catch(\Exception $e){
-            return response()->json(['message' => 'Erro ao enviar e-mail!','error' => $e], 400);
-        }
+        try {
+            Mail::to('wagnerinfo@hotmail.com')->send(new ContactMail($data));
 
+            return response()->json(['message' => 'E-mail enviado com sucesso!'], 200);
+        } catch (\Exception $e) {
+            // Logando o erro para depuração
+            Log::error('Erro ao enviar e-mail: ' . $e->getMessage());
 
-        return response()->json(['message' => 'E-mail enviado com sucesso!']);
+            return response()->json([
+                'message' => 'Erro ao enviar e-mail!',
+                'error' => $e->getMessage()
+            ], 400);
+        }
     }
 }

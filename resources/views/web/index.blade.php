@@ -20,30 +20,45 @@
     <link rel="stylesheet" href="{{ asset('assets') }}/css/flaticon.css">
     <link rel="stylesheet" href="{{ asset('assets') }}/css/icomoon.css">
     <link rel="stylesheet" href="{{ asset('assets') }}/css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets') }}/css/custom.css">
 
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
 </head>
   <body id="index" >
-	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
-	    <div class="container d-flex align-items-center">
-	    	<a class="navbar-brand" href="{{ asset('') }}">
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
+        <div class="container d-flex align-items-center">
+            <a class="navbar-brand" href="{{ asset('') }}">
                 <img src="{{ asset('assets') }}/images/logo.svg" alt="" class="logo" srcset="">
             </a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	        	<li class="nav-item active"><a href="#index" class="nav-animate nav-link pl-0">Home</a></li>
-	        	<li class="nav-item"><a href="#about" class="nav-animate nav-link">Sobre Nós</a></li>
-	        	<li class="nav-item"><a href="#gallery" class="nav-animate nav-link">Galeria</a></li>
-	        	<li class="nav-item"><a href="#services" class="nav-animate nav-link">Serviços</a></li>
-	        	<li class="nav-item"><a href="#contact" class="nav-animate nav-link">Contato</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="#index" class="nav-animate nav-link pl-0">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-animate nav-link">Sobre Nós</a></li>
+                    <li class="nav-item"><a href="#gallery" class="nav-animate nav-link">Galeria</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-animate nav-link">Serviços</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-animate nav-link">Contato</a></li>
+                </ul>
+
+                <!-- Redes sociais dentro do colapso -->
+                <div class="social-links-wrapper">
+                    <ul class="navbar-nav social-links">
+                        <li class="ftco-animate icons-top nav-link d-flex">
+                            <a href="https://web.facebook.com/educacaosemear"><span class="icon-facebook"></span></a>
+                            <a href="https://www.youtube.com/@CEISemear"><span class="icon-youtube"></span></a>
+                            <a href="https://www.instagram.com/ceisemear"><span class="icon-instagram"></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
     <!-- END nav -->
 
     <section class="home-slider owl-carousel">
@@ -52,7 +67,7 @@
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-8 text-center ftco-animate">
-            <h1 class="mb-4">O espaço perfeito<span>para seu filho</span></h1>
+            <h1 class="mb-4">Semeando sonhos, <span>Colhendo conquistas.</span></h1>
             <p><a href="#contact" class="nav-animate btn btn-secondary px-4 py-3 mt-3">Contate-nos</a></p>
           </div>
         </div>
@@ -64,7 +79,7 @@
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-8 text-center ftco-animate">
-            <h1 class="mb-4">Venha nos conhecer<span> e se apaixonar</span></h1>
+            <h1 class="mb-4">Aqui, cada criança é uma semente pronta para <span>FLORESCER.</span></h1>
             <p><a href="#contact" class="nav-animate btn btn-secondary px-4 py-3 mt-3">Contate-nos</a></p>
           </div>
         </div>
@@ -79,25 +94,36 @@
             <div class="row justify-content-center mb-5 pb-2">
                 <div class="col-md-8 text-center heading-section ftco-animate">
                   <h2 class="mb-4"><span>Sobre</span>Nós</h2>
-                  <p>Conheça um pouco da nossa história</p>
+                  <p>EDUCAR é SEMEAR</p>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-12 wrap-about py-5 pr-md-4 ftco-animate">
-                    <h2 class="mb-4">Quem Somos?</h2>
+                <div class="col-md-12 wrap-about pr-md-4 ftco-animate">
+                    <h2 class="mb-2">Quem Somos?</h2>
                     <p class="text-justify">
-                        Bem-vindo à Educacao Semear!
+                        Bem-vindo(a) à Educação Semear!
                         <br><br>
-                        Na Educacao Semear, nossa missão é nutrir o potencial das crianças desde os primeiros dias de vida. Oferecemos um ambiente acolhedor e enriquecedor que vai do berçário ao Infantil 4, com o objetivo de apoiar o desenvolvimento integral dos pequenos em suas fases iniciais.
+                            <span class="pl-5">
+                                Nutrir o potencial de cada criança desde os primeiros dias de vida é garantir uma vida próspera. Aqui, proporcionamos um ambiente acolhedor e rico, do berçário ao Infantil 4, com foco no desenvolvimento integral em cada fase da infância.
+                            </span>
+                            <br>
+                            <span class="pl-5">
+                                Cada criança é única e se desenvolve no seu próprio ritmo. É sabendo disso que aqui na Educação Semear  criamos programas de maneira cuidadosa, planejados para atender cada faixa etária, estimulando o crescimento cognitivo, emocional e social, por meio de atividades lúdicas, e interativas.
+                            </span>
+                            <br>
+                            <span class="pl-5">
+                                Nossa equipe é formada por profissionais experientes e dedicados, que focam em tornar o aprendizado um processo, leve, divertido e significativo, onde as crianças exploram o mundo, descobrem o que há nele e aprendem tudo da melhor maneira.
+                            </span>
+                            <br>
+                            <span class="pl-5">
+                                Sabemos que os primeiros anos são essenciais para a construção de uma base sólida para o futuro. Por isso, criamos este ambiente: um local onde toda criança floresce, ganha confiança e se prepara para novos desafios com entusiasmo, em sua forma e tempo..
+                            </span>
+                            <br>
+                            <span class="pl-5">
+                                Venha conhecer nossa abordagem e descubra como podemos apoiar o desenvolvimento de seu filho desde os primeiros passos!
+                            </span>
                         <br>
-                        Nossa abordagem é fundamentada na compreensão de que cada criança é única e se desenvolve no seu próprio ritmo. Por isso, nossos programas são projetados para atender às necessidades específicas de cada faixa etária, promovendo o crescimento cognitivo, emocional e social através de atividades lúdicas e estimulantes.
-                        <br>
-                        Contamos com uma equipe de profissionais dedicados e experientes, que trabalham com carinho e empenho para criar experiências educativas que são tanto educativas quanto divertidas. Nosso currículo é cuidadosamente elaborado para garantir que as crianças explorem, descubram e aprendam de forma segura e prazerosa.
-                        <br>
-                        Na Educacao Semear, acreditamos que os primeiros anos são fundamentais para a formação de uma base sólida para o futuro. Por isso, nos empenhamos em proporcionar um ambiente onde cada criança possa florescer e se preparar para os próximos desafios com confiança e alegria.
-                        <br>
-                        Venha conhecer a nossa abordagem e descubra como podemos apoiar o desenvolvimento dos seus filhos desde os primeiros passos até o Infantil 4.
                     </p>
                 </div>
             </div>
@@ -112,7 +138,7 @@
             <div class="row justify-content-center mb-5 pb-2">
                 <div class="col-md-8 text-center heading-section ftco-animate">
                   <h2 class="mb-4"><span>Nosso</span> Espaço</h2>
-                  <p>Conheça um pouco da nossa estrutura</p>
+                  <p>Onde toda semente floresce</p>
                 </div>
             </div>
 
@@ -126,7 +152,7 @@
                             </a>
                         </div>
                     @endforeach
-		</div>
+		    </div>
     	</div>
     </section>
 
@@ -134,64 +160,77 @@
 
 
 
-    <section id="services" class="ftco-section">
+    <section id="services" class="p-0 ftco-section">
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-2">
                 <div class="col-md-8 text-center heading-section ftco-animate">
-                    <h2 class="mb-4"><span>Nossos</span> Serviços</h2>
-                    <p>Estamos preparados para cuidar do seu filho do Berçario ao Infantil 4</p>
+                    <h2 class="mb-4"><span>A CRIANÇA EM DESENVOLVIMENTO</span> CONSTANTE</h2>
+                    <p>
+                        Um mundo repleto de descobertas a aguarda!
+                    </p>
                 </div>
             </div>
-    		<div class="row">
-        	<div class="col-md-6 col-lg-3 ftco-animate ">
-        		<div class="pricing-entry bg-light pb-4 text-center">
-        			<div>
-	        			<h3 class="mb-3">Berçario</h3>
-	        		</div>
-	        		<div class="img" style="background-image: url({{ asset('assets') }}/images/bg_1.jpg);"></div>
-	        		<div class="px-4">
-	        			<p>Atendemos crianças a partir de 06 meses de vida</p>
-        			</div>
-        			<p class="button text-center"><a href="#contact" class="nav-animate btn btn-primary px-4 py-3">Consulte-nos</a></p>
-        		</div>
-        	</div>
-        	<div class="col-md-6 col-lg-3 ftco-animate">
-        		<div class="pricing-entry bg-light pb-4 text-center">
-        			<div>
-	        			<h3 class="mb-3">Infantil 2</h3>
-	        		</div>
-	        		<div class="img" style="background-image: url({{ asset('assets') }}/images/bg_2.jpg);"></div>
-        			<div class="px-4">
-	        			<p>Texto para infantil 2</p>
-        			</div>
-        			<p class="button text-center"><a href="#contact" class="nav-animate btn btn-secondary px-4 py-3">Consulte-nos</a></p>
-        		</div>
-        	</div>
-        	<div class="col-md-6 col-lg-3 ftco-animate">
-        		<div class="pricing-entry bg-light active pb-4 text-center">
-        			<div>
-	        			<h3 class="mb-3">Infantil 3</h3>
-	        		</div>
-	        		<div class="img" style="background-image: url({{ asset('assets') }}/images/bg_3.jpg);"></div>
-        			<div class="px-4">
-	        			<p>Infantil 3</p>
-        			</div>
-        			<p class="button text-center"><a href="#contact" class="nav-animate btn btn-tertiary px-4 py-3">Consulte-nos</a></p>
-        		</div>
-        	</div>
-        	<div class="col-md-6 col-lg-3 ftco-animate">
-        		<div class="pricing-entry bg-light pb-4 text-center">
-        			<div>
-	        			<h3 class="mb-3">Infantil 3</h3>
-	        		</div>
-	        		<div class="img" style="background-image: url({{ asset('assets') }}/images/bg_5.jpg);"></div>
-        			<div class="px-4">
-	        			<p>Infantil 4</p>
-        			</div>
-        			<p class="button text-center"><a href="#contact" class="nav-animate btn btn-quarternary px-4 py-3">Consulte-nos</a></p>
-        		</div>
-        	</div>
-        </div>
+    		<div class="row d-flex justify-space-between">
+                <div class="col-md-4 col-lg-3 ftco-animate d-flex">
+                    <div class="pricing-entry bg-light pb-4 text-center">
+                        <div>
+                            <h3 class="mb-3">Berçario</h3>
+                        </div>
+                        <div class="img" style="background-image: url({{ asset('assets') }}/images/bg_1.jpg);"></div>
+                        <div class="px-4">
+                            <p>Cuidado, carinho e estímulos desde os primeiros meses.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2 ftco-animate d-flex">
+                    <div class="pricing-entry bg-light pb-4 text-center">
+                        <div>
+                            <h3 class="mb-3">Infantil 1</h3>
+                        </div>
+                        <div class="img" style="background-image: url({{ asset('assets') }}/images/bg_2.jpg);"></div>
+                        <div class="px-4">
+                            <p>Primeiras descobertas em um mundo enorme!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2 ftco-animate d-flex">
+                    <div class="pricing-entry bg-light pb-4 text-center">
+                        <div>
+                            <h3 class="mb-3">Infantil 2</h3>
+                        </div>
+                        <div class="img" style="background-image: url({{ asset('assets') }}/images/bg_2.jpg);"></div>
+                        <div class="px-4">
+                            <p>Explorando e se desenvolvendo de pouco em pouco!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2 ftco-animate d-flex">
+                    <div class="pricing-entry bg-light active pb-4 text-center">
+                        <div>
+                            <h3 class="mb-3">Infantil 3</h3>
+                        </div>
+                        <div class="img" style="background-image: url({{ asset('assets') }}/images/bg_3.jpg);"></div>
+                        <div class="px-4">
+                            <p>Curiosidade, criatividade e educação florescendo cada vez mais!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 ftco-animate d-flex">
+                    <div class="pricing-entry bg-light pb-4 text-center">
+                        <div>
+                            <h3 class="mb-3">Infantil 4</h3>
+                        </div>
+                        <div class="img" style="background-image: url({{ asset('assets') }}/images/bg_5.jpg);"></div>
+                        <div class="px-4">
+                            <p>A preparação para novos desafios com autonomia e confiança.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 text-center heading-section ftco-animate">
+                <h5 class="mb-4 py-4">GARANTA O FUTURO QUE SUA CRIANÇA MERECE.</h5>
+                <a href="#contact" class="nav-animate btn btn-secondary px-4 py-3 mt-3">Contate-nos</a>
+            </div>
     	</div>
     </section>
 
@@ -284,8 +323,9 @@
             <div class="ftco-footer-widget mb-5">
             	<h2 class="ftco-heading-2 mb-0">Conecte Conosco</h2>
             	<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="https://web.facebook.com/educacaosemear"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.youtube.com/@CEISemear"><span class="icon-youtube"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/ceisemear"><span class="icon-instagram"></span></a></li>
               </ul>
             </div>
           </div>
@@ -301,12 +341,21 @@
       </div>
     </footer>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen">
-    <svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
-        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
-    </svg>
-</div>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen">
+        <svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+        </svg>
+    </div>
+
+    <a href="https://api.whatsapp.com/send?phone=550425504230273565&text=Olá!%20Esta%20é%20uma%20mensagem%20e%20vinda%20do%20site." class="float-whats" target="_blank" onclick="goog_report_conversion('https://api.whatsapp.com/send?phone=5504230273565&text=Olá!%20Esta%20é%20uma%20mensagem%20do%20site.')">
+        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI1MTIiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIiB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcyBpZD0iZGVmczEyIi8+PGcgaWQ9Imc1MTI0Ij48cmVjdCBoZWlnaHQ9IjUxMiIgaWQ9InJlY3QyOTg3IiByeD0iNjQiIHJ5PSI2NCIgc3R5bGU9ImZpbGw6IzY1YmM1NDtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSIgd2lkdGg9IjUxMiIgeD0iMCIgeT0iMCIvPjxwYXRoIGQ9Im0gNDU2LDI1MC44NTI2NiBjIDAsMTA3LjYwOTA0IC04Ny45MTI2LDE5NC44NDQyIC0xOTYuMzYzOTcsMTk0Ljg0NDIgLTM0LjQzMDY2LDAgLTY2Ljc3Njc3LC04LjgwMTY4IC05NC45MTk5LC0yNC4yNDE2MiBMIDU2LjAwMDAwNSw0NTYgOTEuNDM3NzQ1LDM1MS40NTU4NCBDIDczLjU1OTcxNSwzMjIuMDg4NzIgNjMuMjY1MDI1LDI4Ny42NTUyMyA2My4yNjUwMjUsMjUwLjg1MTI0IDYzLjI2NTAyNSwxNDMuMjM1MTYgMTUxLjE4MDQ5LDU2IDI1OS42MzQ2Myw1NiAzNjguMDg3NCw1Ni4wMDEgNDU2LDE0My4yMzY1NyA0NTYsMjUwLjg1MjY2IHogTSAyNTkuNjM2MDMsODcuMDMxOTYgYyAtOTEuMDQwOTIsMCAtMTY1LjA5Mzk2NSw3My40OTI0OCAtMTY1LjA5Mzk2NSwxNjMuODIwNyAwLDM1Ljg0MDU2IDExLjY4MzQ2NSw2OS4wNDE2MiAzMS40NDYwNTUsOTYuMDQ1MjkgbCAtMjAuNjIxNzcsNjAuODMxNTEgNjMuNDQyODUsLTIwLjE2NDAzIGMgMjYuMDcxMjYsMTcuMTEzMjMgNTcuMjkxOTYsMjcuMDk4MDUgOTAuODI1NDMsMjcuMDk4MDUgOTEuMDI5NjUsMCAxNjUuMDkzOTYsLTczLjQ4NTQzIDE2NS4wOTM5NiwtMTYzLjgxMjI0IDAsLTkwLjMyNjggLTc0LjA2MjkyLC0xNjMuODE5MjggLTE2NS4wOTI1NiwtMTYzLjgxOTI4IHogbSA5OS4xNTUyNiwyMDguNjg5NzIgYyAtMS4yMDk4OSwtMS45ODg3OSAtNC40MTg1LC0zLjE4NjAyIC05LjIyNDI0LC01LjU3MDYgLTQuODE3MDUsLTIuMzg3NCAtMjguNDg5NjQsLTEzLjk0NTUxIC0zMi44OTQsLTE1LjUzNDI5IC00LjQxODQ1LC0xLjU5MzAxIC03LjYzMTIyLC0yLjM5MzA0IC0xMC44MzgzOCwyLjM4NDU4IC0zLjIwNDMyLDQuNzkwMjggLTEyLjQyODU2LDE1LjUzNDI5IC0xNS4yNDI3MywxOC43MjAzMSAtMi44MDg1MywzLjE5MTY2IC01LjYwODYzLDMuNTkwMjYgLTEwLjQyNTY5LDEuMjAwMDMgLTQuODA1NzgsLTIuMzg3MzkgLTIwLjMyMTc3LC03LjQyODQgLTM4LjcwODI2LC0yMy43MDIxNSAtMTQuMzA3NDksLTEyLjY1ODE1IC0yMy45Njk3OCwtMjguMjg1NCAtMjYuNzc4MzEsLTMzLjA3MTQ3IC0yLjgwODU0LC00Ljc3OTAzIC0wLjI5NzIsLTcuMzYyMiAyLjEwOTkzLC05LjczOTc1IDIuMTY2MjYsLTIuMTQ3OTYgNC44MTQyMywtNS41ODE4NiA3LjIyNDE2LC04LjM2MzY0IDIuNDA3MTIsLTIuNzk0NDcgMy4yMDcxNSwtNC43ODE4NCA0LjgwODYxLC03Ljk2OTI2IDEuNjEyNzIsLTMuMTg4ODQgMC44MDAwMiwtNS45NzQ4NSAtMC4zOTg2LC04LjM3MDcgLTEuMjAyODYsLTIuMzgzMTcgLTEwLjgzMjc0LC0yNS44ODk1NSAtMTQuODQ0MTUsLTM1LjQ0OSAtNC4wMTEzOCwtOS41NTk0NyAtOC4wMTE1LC03Ljk2NjQ2IC0xMC44MjU2OCwtNy45NjY0NiAtMi44MDk5NiwwIC02LjAxNTY5LC0wLjQwMDAyIC05LjIyOTg3LC0wLjQwMDAyIC0zLjIwOTk3LDAgLTguNDI3MDMsMS4xOTg2NCAtMTIuODM1NjIsNS45NzM0NCAtNC40MTAwMSw0Ljc4MzI1IC0xNi44NDEzOCwxNi4zMzI5MSAtMTYuODQxMzgsMzkuODMzNjUgMCwyMy41MDQ5NyAxNy4yNDI3OSw0Ni4yMTEzMyAxOS42NTI3Myw0OS4zOTU5NCAyLjQwNDMxLDMuMTc3NTYgMzMuMjg4MzgsNTIuOTcyMSA4Mi4yMTgxMSw3Mi4xMDIyOCA0OC45NDgwMiwxOS4xMTMyOCA0OC45NDgwMiwxMi43NDQwNyA1Ny43NzM2NSwxMS45MzcgOC44MTQzNywtMC43ODczNSAyOC40Njk5MiwtMTEuNTQ0MDMgMzIuNDg4MzIsLTIyLjcwMDcyIDQuMDA4NiwtMTEuMTQ5NjQgNC4wMDg2LC0yMC43MTg5NiAyLjgxMTQsLTIyLjcwOTE3IHoiIGlkPSJXaGF0c0FwcF8yXyIgc3R5bGU9ImZpbGw6I2ZmZmZmZjtmaWxsLXJ1bGU6ZXZlbm9kZCIvPjwvZz48cGF0aCBkPSJtIDE4LjY5NTc0LDQ5My4yODc1MSBjIDExLjU2Nzk4LDExLjU2NzkgMjcuNTc2MDYsMTguNzEyNSA0NS4zMDQwNCwxOC43MTI1IGwgMzg0LjAxMjU1LC0wLjAyOSBjIDM1LjQ1NiwwIDYzLjk4NzcsLTI4LjUzMTYgNjMuOTg3NywtNjMuOTg3NTkgbCAwLC0zODMuOTgzNjg1IGMgMCwtMTcuNzI3OTggLTcuMTQ0NiwtMzMuNzM2MDMgLTE4LjcxMjYsLTQ1LjMwNDAzIEwgMTguNjk1NzQsNDkzLjI4NzUxIHoiIGlkPSJyZWN0Mjk4NC0xIiBzdHlsZT0iZmlsbDojMDAwMDAwO2ZpbGwtb3BhY2l0eTowLjMwMTk2MDc4O2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lIi8+PC9zdmc+" alt="" width="50px">
+    </a>
+
+    <style>
+        .float-whats{right: 25px; position:fixed; width:50px;  height:50px; bottom:25px; text-align:center; z-index:100;}
+    </style>
 
 
   <script src="{{ asset('assets') }}/js/jquery.min.js"></script>

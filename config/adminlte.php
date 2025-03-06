@@ -278,8 +278,8 @@ return [
     */
 
     'enabled_laravel_mix' => false,
-    'laravel_mix_css_path' => 'resource/css/app.css',
-    'laravel_mix_js_path' => 'resource/js/app.js',
+    'laravel_mix_css_path' => 'public/build/assets/app.css',
+    'laravel_mix_js_path' => 'public/build/assets/app.js',
 
     /*
     |--------------------------------------------------------------------------

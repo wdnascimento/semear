@@ -43,5 +43,5 @@
 
 
 @section('js')
-    @vite('resources/js/app.js')
+    @vite('public/build/assets/app.js')
 @stop

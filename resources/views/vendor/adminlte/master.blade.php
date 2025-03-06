@@ -31,7 +31,7 @@
         @endif
         @vite('public/vendor/adminlte/dist/css/adminlte.min.css')
         @vite(config('adminlte.laravel_mix_css_path', 'css/app.css'))
-        @vite('resources/css/app.css')
+        @vite('public/build/assets/app.css')
         @vite(config('adminlte.laravel_mix_js_path', 'js/app.js'))
     @else
         <link rel="stylesheet" href="{{ mix(config('adminlte.laravel_mix_css_path', 'css/app.css')) }}">

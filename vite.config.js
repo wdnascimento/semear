@@ -8,6 +8,7 @@ export default defineConfig({
     resolve: {
         alias: {
             vue: resolve(__dirname, 'node_modules/vue/dist/vue.esm-bundler.js'),
+            '@': resolve(__dirname, 'resources/js'),
         },
     },
     plugins: [
@@ -15,18 +16,17 @@ export default defineConfig({
         vue(),
         laravel({
             input: [
-                'resources/js/app.js',
                 'public/vendor/bootstrap/js/bootstrap.bundle.min.js',
 
                 'public/vendor/fontawesome-free/css/all.min.css',
                 'public/vendor/overlayScrollbars/css/OverlayScrollbars.min.css',
                 'public/vendor/adminlte/dist/css/adminlte.min.css',
-                'resources/css/app.css',
-
                 'public/vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js',
                 'public/vendor/adminlte/dist/js/adminlte.min.js',
-                // 'resources/js/custom.js',
-                'public/plugins/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js'
+                'public/plugins/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js',
+
+                'resources/css/app.css',
+                'resources/js/app.js',
             ],
             refresh: true
         })

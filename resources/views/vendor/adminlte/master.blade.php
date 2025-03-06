@@ -30,7 +30,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
         @endif
         @vite('public/vendor/adminlte/dist/css/adminlte.min.css')
-        @vite(['public/build/assets/app.css', 'public/build/assets/app.js'])
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 
     @else
         <link rel="stylesheet" href="{{ mix(config('adminlte.laravel_mix_css_path', 'css/app.css')) }}">

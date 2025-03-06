@@ -24,8 +24,8 @@ export default defineConfig({
 
             'public/vendor/overlayScrollbars/js/jquery.overlayScrollbars.min.js',
             'public/vendor/adminlte/dist/js/adminlte.min.js',
-            'resources/js/custom.js',
-            'resources/js/mask.js',
+            // 'resources/js/custom.js',
+            'public/plugins/jQuery-Mask-Plugin-master/dist/jquery.mask.min.js',
         ]),
 
 
